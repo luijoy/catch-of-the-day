@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {formatPrice} from '../helpers';
 
@@ -26,5 +27,11 @@ class Fish extends React.Component {
     );
   }
 }
+
+Fish.propTypes = {
+  details: PropTypes.object.isRequired,
+  index: PropTypes.string.isRequired,
+  addToOrder: PropTypes.func.isRequired,
+};
 
 export default Fish;
